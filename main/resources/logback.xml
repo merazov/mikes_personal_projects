@@ -1,0 +1,13 @@
+<configuration>
+  <!-- to screen -->
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!-- screen output pattern -->
+      <pattern>%d{HH:mm:ss.SSS} [%X{IP}] [%thread] %-5level [%F:%L] - %msg %n</pattern>
+    </encoder>
+  </appender>
+  
+  <root level="INFO">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
