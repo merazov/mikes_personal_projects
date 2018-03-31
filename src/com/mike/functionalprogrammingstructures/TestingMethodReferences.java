@@ -1,4 +1,4 @@
-package com.mike.functionalInterfaces;
+package com.mike.functionalprogrammingstructures;
 
 import java.util.Arrays;
 import java.util.List;
