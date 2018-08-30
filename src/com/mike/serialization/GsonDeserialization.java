@@ -76,11 +76,11 @@ public class GsonDeserialization {
     public void deserializeADataStructureContainingAMap() {
         String json = "\"mix_groups\":{\"{:country_id=>17, :channel_id=>1, :device_type_id=>25, :retailer_id=>nil, :program_id=>201, :dtcp=>true, :storage_id=>37, :carrier_id=>72, :bundle_id=>5, :color_id=>34}\":\"0.0\"}"; 
         
-        mixGroups = GSON.fromJson(json, MyDataStructure.class);
+        /*mixGroups = GSON.fromJson(json, MyDataStructure.class);
         for(Map.Entry<Spec, BigDecimal> entry : mixGroups.entrySet()) {
             System.out.println("mixGroups key=" + entry.getKey());
             System.out.println("mixGroups value=" + entry.getValue());
-        }
+        }*/
     }
     
     public static void main(String[] args) {
