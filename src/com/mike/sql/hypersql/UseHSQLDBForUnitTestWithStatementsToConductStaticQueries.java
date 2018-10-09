@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { Config.class })
-public class UseStatementToConductStaticQueries {
+public class UseHSQLDBForUnitTestWithStatementsToConductStaticQueries {
 
     @Autowired
     private Connection dbConnection;
@@ -47,8 +47,7 @@ public class UseStatementToConductStaticQueries {
     private void initDatabase() throws SQLException {
 
         try (Statement statement = dbConnection.createStatement();) {
-            statement
-                    .execute("CREATE TABLE employee (id INT NOT NULL, name VARCHAR(250) NOT NULL, email VARCHAR(50) NOT NULL, PRIMARY KEY (id))");
+            statement.execute("CREATE TABLE employee (id INT NOT NULL, name VARCHAR(250) NOT NULL, email VARCHAR(50) NOT NULL, PRIMARY KEY (id))");
             dbConnection.commit();
 
             statement.executeUpdate("INSERT INTO employee VALUES (1,'Miguel Erazo', 'merazo@amazon.com')");
