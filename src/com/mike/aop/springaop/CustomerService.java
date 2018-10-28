@@ -1,4 +1,4 @@
-package com.mike.aop.springaop.xml;
+package com.mike.aop.springaop;
 
 import lombok.Getter;
 import lombok.Setter;

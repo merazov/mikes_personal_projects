@@ -4,13 +4,13 @@
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<bean id="customerService"
-		class="com.mike.aop.springaop.xml.CustomerService">
+		class="com.mike.aop.springaop.CustomerService">
 		<property name="name" value="Miguel Erazo" />
 		<property name="url" value="http://www.amazon.com" />
 	</bean>
 
 	<bean id="hijackBeforeMethodBean"
-		class="com.mike.aop.springaop.xml.HijackBeforeMethod" />
+		class="com.mike.aop.springaop.HijackBeforeMethod" />
 
 	<bean id="customerServiceProxy"
 		class="org.springframework.aop.framework.ProxyFactoryBean">
