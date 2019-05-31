@@ -11,6 +11,7 @@
 	<bean id="customerBo" class="com.mike.aop.springaop.aspectj.CustomerBoImpl" />
 
 	<!-- Aspect -->
+	<!--When the AspectJ bean is not created, then the advices are not conducted-->
 	<bean id="logAspect" class="com.mike.aop.springaop.aspectj.LoggingAspect" />
 
 </beans>
