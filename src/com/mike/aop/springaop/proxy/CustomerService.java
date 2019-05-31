@@ -1,4 +1,4 @@
-package com.mike.aop.springaop;
+package com.mike.aop.springaop.proxy;
 
 import lombok.Getter;
 import lombok.Setter;

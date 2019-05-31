@@ -1,4 +1,4 @@
-package com.mike.aop.springaop;
+package com.mike.aop.springaop.proxy;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
 
-        ApplicationContext appContext = new ClassPathXmlApplicationContext(new String[] { "com/mike/aop/springaop/Spring-Customer.xml" });
+        ApplicationContext appContext = new ClassPathXmlApplicationContext(new String[] { "com/mike/aop/springaop/proxy/Spring-Customer.xml" });
 
         /*
          * This will fetch the original object so:
