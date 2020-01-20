@@ -11,6 +11,14 @@ import com.google.common.collect.ImmutableList;
 
 public class IQ_HouseTraversal {
 
+    /**
+     * Match: a course where k packages exactly are picked up
+     * 
+     * @param vertex The current vertex
+     * @param remaining Number of packages left to be picked
+     * @param soFar The path followed so far
+     * @param matches Matches collector
+     */
     public void dfs(final Vertex vertex, int remaining,
                     final List<Vertex> soFar, List<List<Vertex>> matches) {
         if (vertex.getValue() > remaining) {

@@ -1,0 +1,97 @@
+*****[debug predict] forecast_result=[{:prediction_output=><#CSV io_type:StringIO encoding:US-ASCII lineno:0 col_sep:"," row_sep:"\r
+" quote_char:"\"" headers:true>, :summary=>"
+Call:
+lm(formula = formula, data = tdata)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.52473 -0.06627 -0.00120  0.07357  1.34794 
+
+Coefficients: (1 not defined because of singularities)
+                                            Estimate Std. Error t value
+(Intercept)                                6.839e+00  5.515e-02 124.008
+factor(seasonal_weekday)2                  3.033e-02  2.286e-02   1.327
+factor(seasonal_weekday)3                 -1.999e-02  2.275e-02  -0.879
+factor(seasonal_weekday)4                 -7.605e-02  2.264e-02  -3.360
+factor(seasonal_weekday)5                 -1.440e-01  2.264e-02  -6.361
+factor(seasonal_weekday)6                 -2.671e-01  2.275e-02 -11.743
+factor(seasonal_weekday)7                 -3.728e-01  2.254e-02 -16.539
+seasonal_christmasday_n1_n7                3.917e-01  5.841e-02   6.706
+seasonal_christmasday_n8_n14               6.006e-01  1.252e-01   4.799
+seasonal_easterday_0_n2                   -3.617e-01  7.069e-02  -5.117
+seasonal_christmaseve                     -1.015e+00  1.275e-01  -7.963
+seasonal_blackfriday_n1_n5                 2.606e-01  5.937e-02   4.389
+seasonal_blackfriday_n6_n12                4.250e-02  4.985e-02   0.853
+seasonal_blackfriday                       7.370e-01  1.219e-01   6.046
+seasonal_blackfriday_p1_p2                 8.015e-01  8.928e-02   8.978
+seasonal_cybermonday                       5.262e-01  1.278e-01   4.117
+seasonal_cybermonday_0_p6                  4.646e-01  5.965e-02   7.789
+seasonal_cybermonday_p7_p13                1.093e+00  5.835e-02  18.735
+seasonal_cybermonday_p14_p20               8.046e-01  1.255e-01   6.412
+seasonal_jan1_p1_p5                        7.699e-02  5.740e-02   1.341
+seasonal_momsday_n7_n13                    1.995e-01  5.070e-02   3.934
+seasonal_easterday_n3_n7                  -2.104e-01  5.596e-02  -3.760
+trend_linear_20121125                     -1.072e-04  2.969e-05  -3.610
+price_ratio_de_online_eink_kindle_v2              NA         NA      NA
+seasonality_prime_day_start_from_2015      2.242e-02  8.736e-02   0.257
+seasonality_prime_day_m1w_start_from_2015 -1.617e-01  5.063e-02  -3.195
+seasonality_prime_day_p1w_start_from_2015 -1.607e-01  5.117e-02  -3.140
+seasonal_yearly_fourier_sine_1            -1.724e-01  9.674e-03 -17.825
+seasonal_yearly_fourier_cosine_1          -2.726e-02  1.250e-02  -2.181
+seasonal_yearly_fourier_cosine_2           9.572e-02  1.056e-02   9.062
+seasonal_yearly_fourier_sine_3            -5.586e-02  1.120e-02  -4.986
+seasonal_yearly_fourier_cosine_3          -2.706e-02  9.916e-03  -2.729
+seasonal_yearly_fourier_sine_4            -3.736e-02  1.092e-02  -3.422
+seasonal_yearly_fourier_sine_6             3.476e-02  1.002e-02   3.468
+seasonal_yearly_fourier_cosine_6          -1.052e-02  1.013e-02  -1.038
+                                          Pr(>|t|)    
+(Intercept)                                < 2e-16 ***
+factor(seasonal_weekday)2                 0.184936    
+factor(seasonal_weekday)3                 0.379927    
+factor(seasonal_weekday)4                 0.000821 ***
+factor(seasonal_weekday)5                 3.55e-10 ***
+factor(seasonal_weekday)6                  < 2e-16 ***
+factor(seasonal_weekday)7                  < 2e-16 ***
+seasonal_christmasday_n1_n7               4.01e-11 ***
+seasonal_christmasday_n8_n14              1.94e-06 ***
+seasonal_easterday_0_n2                   3.97e-07 ***
+seasonal_christmaseve                     6.47e-15 ***
+seasonal_blackfriday_n1_n5                1.31e-05 ***
+seasonal_blackfriday_n6_n12               0.394203    
+seasonal_blackfriday                      2.37e-09 ***
+seasonal_blackfriday_p1_p2                 < 2e-16 ***
+seasonal_cybermonday                      4.27e-05 ***
+seasonal_cybermonday_0_p6                 2.34e-14 ***
+seasonal_cybermonday_p7_p13                < 2e-16 ***
+seasonal_cybermonday_p14_p20              2.59e-10 ***
+seasonal_jan1_p1_p5                       0.180275    
+seasonal_momsday_n7_n13                   9.15e-05 ***
+seasonal_easterday_n3_n7                  0.000184 ***
+trend_linear_20121125                     0.000327 ***
+price_ratio_de_online_eink_kindle_v2            NA    
+seasonality_prime_day_start_from_2015     0.797486    
+seasonality_prime_day_m1w_start_from_2015 0.001461 ** 
+seasonality_prime_day_p1w_start_from_2015 0.001760 ** 
+seasonal_yearly_fourier_sine_1             < 2e-16 ***
+seasonal_yearly_fourier_cosine_1          0.029522 *  
+seasonal_yearly_fourier_cosine_2           < 2e-16 ***
+seasonal_yearly_fourier_sine_3            7.72e-07 ***
+seasonal_yearly_fourier_cosine_3          0.006507 ** 
+seasonal_yearly_fourier_sine_4            0.000657 ***
+seasonal_yearly_fourier_sine_6            0.000555 ***
+seasonal_yearly_fourier_cosine_6          0.299469    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1656 on 726 degrees of freedom
+Multiple R-squared:  0.8428,\tAdjusted R-squared:  0.8356 
+F-statistic: 117.9 on 33 and 726 DF,  p-value: < 2.2e-16
+
+", :stderr=>"", :stdout=>"Calling R with the following: Rscript ./rscripts/regression.R /apollo/env/KindlePlanningOptimizationEngine/var/tmp/3709888585889072157 formulaFile.txt
+Calling R with the following: Rscript ./rscripts/prediction.R /apollo/env/KindlePlanningOptimizationEngine/var/tmp/3709888585889072157 formulaFile.txt 0.5
+[STDERR] Warning messages:
+[STDERR] 1: In predict.lm(fit, newdata = pdata, interval = \"prediction\", se.fit = TRUE) :
+[STDERR]   prediction from a rank-deficient fit may be misleading
+[STDERR] 2: In predict.lm(fit, newdata = pdata, interval = \"prediction\", level = level) :
+[STDERR]   prediction from a rank-deficient fit may be misleading
+", :model_evaluation_id=>0}]

@@ -3,8 +3,11 @@ package com.mike.caches;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.ToString;
+
 public class LRUCache {
 
+    @ToString
     private static class Node {
         public Node prev;
         public Node next;
@@ -102,7 +105,6 @@ public class LRUCache {
             String keyToDelete = head.key;
             deleteNode(head);
             store.remove(keyToDelete);
-            size--;
         }
     }
 

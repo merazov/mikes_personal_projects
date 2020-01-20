@@ -10,6 +10,9 @@ public class ExceptionChaining {
         try {
             third();
         } catch (Exception e) {
+            if (e.getCause() != null) {
+   //             System.out.println("***cause at second:" + e.getCause().getMessage());
+            }
             throw new Second("second", e);
         }
     }
@@ -18,6 +21,9 @@ public class ExceptionChaining {
         try {
             second();
         } catch (Exception e) {
+            if (e.getCause() != null) {
+    //          System.out.println("***cause at first:" + e.getCause().getMessage());
+            }
             throw new First("first", e);
         }
     }
@@ -91,11 +97,11 @@ public class ExceptionChaining {
          * This invocation yields:
          * 
          * Exception in thread "main" com.mike.exceptions.ExceptionChaining$First: first
-                at com.mike.exceptions.ExceptionChaining.first(ExceptionChaining.java:21)
-                at com.mike.exceptions.ExceptionChaining.main(ExceptionChaining.java:59)
+                at com.mike.exceptions.ExceptionChaining.first(ExceptionChaining.java:27)
+                at com.mike.exceptions.ExceptionChaining.main(ExceptionChaining.java:111)
             Caused by: com.mike.exceptions.ExceptionChaining$Second: second
-                at com.mike.exceptions.ExceptionChaining.second(ExceptionChaining.java:13)
-                at com.mike.exceptions.ExceptionChaining.first(ExceptionChaining.java:19)
+                at com.mike.exceptions.ExceptionChaining.second(ExceptionChaining.java:16)
+                at com.mike.exceptions.ExceptionChaining.first(ExceptionChaining.java:22)
                 ... 1 more
             Caused by: com.mike.exceptions.ExceptionChaining$Third: third
                 at com.mike.exceptions.ExceptionChaining.third(ExceptionChaining.java:6)
@@ -113,7 +119,7 @@ public class ExceptionChaining {
             at com.mike.exceptions.ExceptionChaining.first_(ExceptionChaining.java:58)
             at com.mike.exceptions.ExceptionChaining.main(ExceptionChaining.java:79)
          */
-        first_(); //< let it bubble up!
+        //first_(); //< let it bubble up!
         
         /*
          * This invocation yields:
@@ -122,6 +128,6 @@ public class ExceptionChaining {
             at com.mike.exceptions.ExceptionChaining.first__(ExceptionChaining.java:85)
             at com.mike.exceptions.ExceptionChaining.main(ExceptionChaining.java:118)
          */
-        first__(); //< without exception chaining
+        //first__(); //< without exception chaining
     }
 }
